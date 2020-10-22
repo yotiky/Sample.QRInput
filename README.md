@@ -1,1 +1,1 @@
-# QRInputSample
+# Sample.QRInput
