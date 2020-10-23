@@ -53,7 +53,10 @@ public class QRScanner : MonoBehaviour
                     if (action.Type == ActionData.EventType.Added 
                         || action.Type == ActionData.EventType.Updated)
                     {
-                        onScanned.OnNext(action.QRCode);
+                        if (DateTimeOffset.Compare(StartTime, action.QRCode.LastDetectedTime) < 0)
+                        {
+                            onScanned.OnNext(action.QRCode);
+                        }
                     }
                 }
 
