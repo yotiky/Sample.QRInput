@@ -4,7 +4,7 @@ using TMPro;
 using UniRx;
 using UnityEngine;
 
-public class QRVisualizer : MonoBehaviour
+public class QRTextVisualizer : MonoBehaviour
 {
     public TextMeshPro textMeshPro;
     private QRScanner qRScanner;
